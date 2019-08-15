@@ -7,12 +7,12 @@ class Layout extends PureComponent {
 
         return (
             <React.Fragment>
-                {React.createElement(header)}
+                {header ? React.createElement(header) : ''}
                 <main className={(header ? 'main main--with-header' : '') + (footer ? ' main--with-footer' : '')}>
                     <p className="main__title section-title">Main</p>
                     {children}
                 </main>
-                {React.createElement(footer)}
+                {footer ? React.createElement(footer) : ''}
             </React.Fragment>
         )
     }
