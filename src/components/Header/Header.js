@@ -6,13 +6,13 @@ import SectionTitle from "../SectionTitle";
 class Header extends PureComponent {
     render() {
         return <AuthConsumer>
-            {({isAuthorized, email}) => {
+            {({isAuthorized, email, logout}) => {
                 return <header className="header">
                     <SectionTitle className="header__title" >Header</SectionTitle>
                     <div className="header__content">
-                        {isAuthorized ? <div>
+                        {isAuthorized ? <div className="header-menu">
                                 <p className="header-menu__email header-email t-header-email">{email}</p>
-                                <button className="header-menu__button t-logout button"> Выйти</button>
+                                <button className="header-menu__button t-logout button" onClick={logout}> Выйти</button>
                             </div>
                             : ''}
                     </div>
