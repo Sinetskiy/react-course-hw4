@@ -10,7 +10,7 @@ class AuthProvider extends PureComponent {
         if (login === 'stu@dent.com' && pass === '123') {
             this.setState({email: login, authorizeError: '', isAuthorized: true});
         } else {
-            this.setState({email: login, authorizeError: 'Email или пароль введён не верно', isAuthorized: false});
+            this.setState({ authorizeError: 'Email или пароль введён не верно'});
         }
     };
 
